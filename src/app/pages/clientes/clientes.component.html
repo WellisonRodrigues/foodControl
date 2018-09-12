@@ -1,31 +1,19 @@
-<div class="container">
-  <table class="table">
-    <thead class="default-color white-text">
+<div class="container mt-3">
+  <table class="table table-bordered table-striped">
+    <thead class="rgba-indigo-strong white-text">
       <tr>
-        <th scope="col">Produto</th>
-        <th scope="col">Quantidade</th>
-        <th scope="col">Preço</th>
-        <th scope="col">Total</th>
+        <th scope="col">NOME</th>
+        <th scope="col">EMAIL</th>
+        <th scope="col">TELEFONE</th>
+        <th scope="col">CPF</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
+      <tr *ngFor="let cliente of clientes">
+        <th scope="row">{{cliente.nome}}</th>
+        <td>{{cliente.email}}</td>
+        <td>{{cliente.telefone}}</td>
+        <td>{{cliente.cpf}}</td>
       </tr>
     </tbody>
   </table>

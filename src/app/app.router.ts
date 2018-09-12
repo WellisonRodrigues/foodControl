@@ -6,6 +6,8 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { ClientesComponent } from './pages/clientes/clientes.component';
 import { LoginComponent } from './pages/login/login.component';
+import { ProdutosComponent } from './pages/produtos/produtos.component';
+
 
 
 
@@ -15,12 +17,12 @@ const routes: Routes = [
         component: HomeComponent
     },
     { 
-        path:'home',
-        component: HomeComponent
-    },
-    { 
         path:'login',
         component: LoginComponent
+    },
+    { 
+        path:'produtos',
+        component: ProdutosComponent
     },
     { 
         path:'about/:parametro',
