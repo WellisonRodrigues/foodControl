@@ -7,8 +7,7 @@ import { ErrorComponent } from './pages/error/error.component';
 import { ClientesComponent } from './pages/clientes/clientes.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ProdutosComponent } from './pages/produtos/produtos.component';
-
-
+import { ClientesCadastroComponent } from './pages/clientes-cadastro/clientes-cadastro.component';
 
 
 const routes: Routes = [
@@ -29,9 +28,14 @@ const routes: Routes = [
         component: AboutComponent
     },
     { 
-        path:'clientes/:parametro',
+        path:'clientes',
         component: ClientesComponent
     },
+    { 
+        path:'cliente/cadastro',
+        component: ClientesCadastroComponent
+    },
+
     { 
         path:'contact',
         component: ContactComponent
