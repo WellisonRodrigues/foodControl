@@ -1,24 +1,28 @@
-<div class="container mt-3">
-  <table class="table table-bordered table-striped">
-    <thead class="rgba-indigo-strong white-text">
-      <tr>
-        <th scope="col">NOME</th>
-        <th scope="col">EMAIL</th>
-        <th scope="col">TELEFONE</th>
-        <th scope="col">CPF</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let cliente of clientes">
-        <th scope="row">{{cliente.nome}}</th>
-        <td>{{cliente.email}}</td>
-        <td>{{cliente.telefone}}</td>
-        <td>{{cliente.cpf}}</td>
-      </tr>
-    </tbody>
-  </table>
-  <div class="text-right">
-    <button type="button" routerLink="/cliente/cadastro" class="btn rgba-indigo-strong">Adicionar
+  <div class="d-flex justify-content-end mr-5">
+    <button type="button" routerLink="/cliente/cadastro" class="btn btn-secondary">Adicionar
       <i class="fa fa-plus ml-2"></i></button>
+  </div>
+<div class="container mt-3">
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <thead class="rgba-indigo-strong white-text">
+        <tr>
+          <th scope="col">NOME</th>
+          <th scope="col">EMAIL</th>
+          <th scope="col">TELEFONE</th>
+          <th scope="col">CPF</th>
+          <th scope="col">EDITAR</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cliente of clientes">
+          <th scope="row">{{cliente.nome}}</th>
+          <td>{{cliente.email}}</td>
+          <td>{{cliente.telefone}}</td>
+          <td>{{cliente.cpf}}</td>
+          <td class="text-center"><button type="button" class="btn btn-secondary"><i class="fa fa-pencil"></i></button></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
