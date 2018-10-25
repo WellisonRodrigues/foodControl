@@ -1,4 +1,4 @@
-import {Routes, RouterModule} from '@angular/router'
+import { Routes, RouterModule } from '@angular/router'
 
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
@@ -11,37 +11,41 @@ import { ClientesCadastroComponent } from './pages/clientes-cadastro/clientes-ca
 
 
 const routes: Routes = [
-    { 
-        path:'',
+    {
+        path: '',
         component: HomeComponent
     },
-    { 
-        path:'login',
+    {
+        path: 'login',
         component: LoginComponent
     },
-    { 
-        path:'produtos',
+    {
+        path: 'produtos',
         component: ProdutosComponent
     },
-    { 
-        path:'about/:parametro',
+    {
+        path: 'about/:parametro',
         component: AboutComponent
     },
-    { 
-        path:'clientes',
+    {
+        path: 'clientes',
         component: ClientesComponent
     },
-    { 
-        path:'cliente/cadastro',
+    {
+        path: 'cliente/cadastro',
+        component: ClientesCadastroComponent
+    },
+    {
+        path: 'cliente/cadastro/:id',
         component: ClientesCadastroComponent
     },
 
-    { 
-        path:'contact',
+    {
+        path: 'contact',
         component: ContactComponent
     },
-    { 
-        path:'**',
+    {
+        path: '**',
         component: ErrorComponent
     }
 ]

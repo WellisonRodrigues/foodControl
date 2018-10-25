@@ -12,7 +12,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientesCadastroComponent implements OnInit {
   sucesso = false;
-  cliente = { nome: '', cpf: '', email: '', telefone: '' }
+  cliente = {  nome: '', cpf: '', email: '', telefone: '' }
 
   constructor(private clientesService: ClientesService) { }
 
