@@ -13,6 +13,7 @@ import { ClientesComponent } from './pages/clientes/clientes.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ProdutosComponent } from './pages/produtos/produtos.component';
 import { ClientesCadastroComponent } from './pages/clientes-cadastro/clientes-cadastro.component';
+import { VendasComponent } from './pages/vendas/vendas.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { ClientesCadastroComponent } from './pages/clientes-cadastro/clientes-ca
     ClientesComponent,
     LoginComponent,
     ProdutosComponent,
-    ClientesCadastroComponent
+    ClientesCadastroComponent,
+    VendasComponent
 
   ],
   imports: [

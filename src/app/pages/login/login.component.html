@@ -1,15 +1,18 @@
-<div class="col-md-4 mx-auto mt-5 card card-body">
-  <div class="md-form">
-    <i class="fa fa-envelope prefix"></i>
-    <input type="email" id="inputValidationEx" class="form-control validate">
-    <label for="inputValidationEx" data-error="wrong" data-success="right">Email</label>
+<form (ngSubmit)="autentica()" id="login">
+  <div class="col-md-4 mx-auto mt-5 card card-body">
+    <div class="md-form">
+      <i class="fa fa-envelope prefix"></i>
+      <input type="text" id="username" name="username" class="form-control validate" [(ngModel)]="user.username">
+      <label for="username" data-error="wrong" data-success="sucesso">Username</label>
+    </div>
+    <div class="md-form">
+      <i class="fa fa-lock prefix"></i>
+      <input type="password" name="password" id="password" [(ngModel)]="user.password" class="form-control validate">
+      <label for="password" data-error="wrong" data-success="sucesso">Password</label>
+    </div>
+
+    <button type="submit" class="btn btn-default">Login</button>
+
   </div>
-  <div class="md-form">
-    <i class="fa fa-lock prefix"></i>
-    <input type="password" id="inputValidationEx2" class="form-control validate">
-    <label for="inputValidationEx2" data-error="wrong" data-success="right">Password</label>
-  </div>
-  
-  <button type="button" class="btn btn-default">Login</button>
-  
-</div>
+</form>
+{{user|json}}

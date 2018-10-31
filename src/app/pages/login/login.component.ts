@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { LoginService } from '../../service/login.service'
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -7,9 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  user: any = { username: '', password: '' };
+
+  constructor(private loginService: LoginService) { }
 
   ngOnInit() {
   }
 
+  autentica() {
+    this.loginService.login(this.user).then(data => {
+      let ret: any = data;
+      if (ret.token) {
+        console.log(ret.token);
+        localStorage.setItem('token', ret.token)
+      } else {
+        alert('dados invalidos');
+      }
+
+    })
+  }
 }

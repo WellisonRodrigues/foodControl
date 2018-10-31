@@ -1,4 +1,4 @@
-import { Routes, RouterModule } from '@angular/router'
+import { Routes, RouterModule, CanActivate } from '@angular/router'
 
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
@@ -8,12 +8,14 @@ import { ClientesComponent } from './pages/clientes/clientes.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ProdutosComponent } from './pages/produtos/produtos.component';
 import { ClientesCadastroComponent } from './pages/clientes-cadastro/clientes-cadastro.component';
-
+import { VendasComponent } from './pages/vendas/vendas.component';
+import { AuthService } from './service/auth.service'
 
 const routes: Routes = [
     {
         path: '',
-        component: HomeComponent
+        component: HomeComponent,
+        canActivate: [AuthService]
     },
     {
         path: 'login',
@@ -21,32 +23,43 @@ const routes: Routes = [
     },
     {
         path: 'produtos',
-        component: ProdutosComponent
+        component: ProdutosComponent,
+        canActivate: [AuthService]
     },
     {
         path: 'about/:parametro',
-        component: AboutComponent
+        component: AboutComponent,
+        canActivate: [AuthService]
+    },
+    {
+        path: 'vendas',
+        component: VendasComponent,
+        canActivate: [AuthService]
     },
     {
         path: 'clientes',
-        component: ClientesComponent
+        component: ClientesComponent,
+        canActivate: [AuthService]
     },
     {
         path: 'cliente/cadastro',
-        component: ClientesCadastroComponent
+        component: ClientesCadastroComponent,
+        canActivate: [AuthService]
     },
     {
         path: 'cliente/cadastro/:id',
-        component: ClientesCadastroComponent
+        component: ClientesCadastroComponent,
+        canActivate: [AuthService]
     },
 
     {
         path: 'contact',
-        component: ContactComponent
+        component: ContactComponent,
+        canActivate: [AuthService]
     },
     {
         path: '**',
-        component: ErrorComponent
+        component: ErrorComponent,
     }
 ]
 
